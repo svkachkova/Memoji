@@ -1,0 +1,25 @@
+@import 'mixin-templete';
+
+.flip {
+    transform: rotateY(180deg);
+}
+
+.hidden {
+	backface-visibility: hidden;
+}
+
+.matched {
+    border-color: $right;
+	background-color: $right;
+}
+
+.unmatched {
+    border-color: $wrong;
+	background-color: $wrong;
+}
+
+.timer {
+    @include w-h(100%, 100px);
+    @include text(32px, 36px);
+	padding: 30px;
+}

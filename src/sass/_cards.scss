@@ -1,0 +1,46 @@
+@import 'mixin-templete';
+
+.cards-wrapper {
+    @extend %flex-row;
+    @include w-h(595px, 440px);
+    perspective: 600px;
+    -ms-user-select: none; 
+    -moz-user-select: none; 
+    -webkit-user-select: none; 
+    user-select: none; 
+}
+
+.card {
+    position: relative;
+    @include w-h(130px, 130px);
+    transform-style: preserve-3d;
+}
+
+.front-face, .back-face {
+    position: absolute;
+    @include w-h(130px, 130px);
+	
+	border: 5px solid #fff;
+	border-radius: 9px;
+
+	cursor: pointer;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    
+    transition: transform .5s ease;
+}
+
+.front-face {
+    @include text(75px, 120px);
+    background-color: $basic;
+}
+
+.back-face {
+    background: linear-gradient(225deg, $gradient1, $gradient2);
+    &:hover {
+        background: linear-gradient(225deg, $gradient1 25%, $gradient2);
+    }
+}
+
+.front-face.flip, .back-face.flip {
+    box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,27 @@
+@import 'variables';
+@import 'mixin-templete';
+
+@import 'cards';
+@import 'effects';
+@import 'modal';
+
+* {
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    @extend %flex-column;
+    background-color: $background;
+}
+
+header {
+    width: 100%;
+}
+
+.title {
+    padding: 40px;
+    @include text(42px, 47px);
+}

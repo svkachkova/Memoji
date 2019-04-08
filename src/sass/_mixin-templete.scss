@@ -1,0 +1,28 @@
+@mixin text($size, $height: auto) {
+    font: {
+        family: Arial, sans-serif;
+        size: $size;
+        weight: bold;
+    }
+    line-height: $height;
+    text-align: center;
+    color: $text;
+}
+
+@mixin w-h($width: auto, $height: auto) {
+    width: $width;
+	height: $height;
+}
+
+%flex-column {
+    display: flex;
+    flex-flow: column nowrap;
+	align-items: center;
+}
+
+%flex-row {
+    display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-content: space-between;
+}

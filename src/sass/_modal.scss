@@ -1,0 +1,44 @@
+@import 'mixin-templete';
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    @include w-h(100%, 100%);
+    background: rgba(0,0,0,.5);
+}
+
+.modal {
+    position: relative;
+    top: calc(50% - 100px);
+
+    @include w-h(350px);
+
+    margin: 0 auto;
+    padding: 30px;
+
+    @include text(48px);
+
+    background-color: $basic;
+}
+
+.button {
+    display: block;
+    @include w-h($height: 40px);
+
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 0 30px;
+
+    border: none;
+    border-radius: 7px;
+
+    @include text(20px);
+    color: $basic;
+
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(270deg, $gradient1, $gradient2);
+
+    &:active {
+        box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.5);
+    }
+}
