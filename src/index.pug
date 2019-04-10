@@ -1,17 +1,17 @@
 doctype html
 html
     head
-    meta(charset = 'utf-8')
-    meta(name='viewport', content="initial-scale=1.0, width=device-width")
-    link(rel="stylesheet", href="style.css")
-    title Memoji
+        meta(charset = 'utf-8')
+        meta(name='viewport', content="initial-scale=1.0, width=device-width")
+        link(rel="stylesheet", href="style.css")
+        title Memoji
 
     body
         header: h1.title Memoji
-        section.cards-wrapper
+        main.cards-wrapper
             - for (let i = 0; i < 12; i++)
                 .card
                     .front-face
                     .back-face
-        section.timer 1:00
+        div.timer 1:00
         script(src="index.js")
